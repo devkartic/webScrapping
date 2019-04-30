@@ -12,9 +12,6 @@ curl_close($curl);
 //echo $response;
 
 $html = new simple_html_dom();
-$homepage = file_get_contents('http://www.example.com/');
-
-
 $html->load($response);
 
 foreach ($html->find('h2[class=title_holder]') as $key => $link){
